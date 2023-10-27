@@ -11,7 +11,7 @@ public class ListaMenu {
         int opcion = 0, elemento;
         do {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "1. Ingresar un dato al final de la lista\n2. Insertar después de un número en la lista\n3. Calcular promedio\n4. Eliminar nodo máximo\n5. Eliminar elementos mayores que un límite\n6. Mostrar todos los datos de la lista\n7. Encontrar elementos repetidos de la lista\n8. Mostrar la lista inversa\n9.Salir "));
+                    "1. Ingresar un dato al final de la lista\n2. Insertar después de un número en la lista\n3. Calcular promedio\n4. Eliminar nodo máximo\n5. Eliminar elementos mayores que un límite\n6. Mostrar todos los datos de la lista\n7. Generar nueva lista con elementos repetidos de la lista Inicial\n8. Mostrar la lista inversa\n9.Salir "));
             switch (opcion) {
                 case 1:
                     elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento"));
@@ -47,7 +47,7 @@ public class ListaMenu {
                     break;
                  case 7:
                     List<Integer> elementosRepetidos = lsl.encontrarElementosRepetidos();
-                    JOptionPane.showMessageDialog(null, "Elementos repetidos: " + elementosRepetidos);
+                    System.out.print("ListaElementosRepetidos: " + elementosRepetidos);
                     break;
                 case 8:
                     List<Integer> listaInversa = lsl.obtenerListaInversa();
