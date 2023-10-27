@@ -58,6 +58,6 @@ public class ListaMenu {
                 default:
                     JOptionPane.showMessageDialog(null, "Opción Incorrecta");
             }
-        } while (opcion != 7);
+        } while (opcion != 9);
     }
 }
