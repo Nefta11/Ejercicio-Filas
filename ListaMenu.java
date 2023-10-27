@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class ListaMenu {
     public static void main(String[] args) {
-        int[] elementosIniciales = {10,7,7,10,10, 20,30,40,40,10,20}; // Elementos iniciales de la lista
+        int[] elementosIniciales = {1,1,2,3,3,4,5,6,6,7,8,9,9,10,10,11}; // Elementos iniciales de la lista
         Lista lsl = new Lista(elementosIniciales);
 
         
