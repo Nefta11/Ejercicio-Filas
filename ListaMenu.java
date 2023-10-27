@@ -1,13 +1,12 @@
 import java.util.List;
-
 import javax.swing.JOptionPane;
 
 public class ListaMenu {
     public static void main(String[] args) {
-        int[] elementosIniciales = {1,1,2,3,3,4,5,6,6,7,8,9,9,10,10,11}; // Elementos iniciales de la lista
+        int[] elementosIniciales = { 1, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 9, 10, 10, 11 }; // Elementos iniciales de la
+                                                                                          // lista
         Lista lsl = new Lista(elementosIniciales);
 
-        
         int opcion = 0, elemento;
         do {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
@@ -19,13 +18,17 @@ public class ListaMenu {
                     lsl.mostrarLista();
                     break;
                 case 2:
-                    int numeroExistente = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el número existente"));
-                    elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresar el elemento a insertar después de " + numeroExistente));
+                    int numeroExistente = Integer
+                            .parseInt(JOptionPane.showInputDialog(null, "Ingrese el número existente"));
+                    elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
+                            "Ingresar el elemento a insertar después de " + numeroExistente));
                     boolean insertado = lsl.insertarDespuesDe(numeroExistente, elemento);
                     if (insertado) {
-                        JOptionPane.showMessageDialog(null, "Se ha insertado el elemento después de " + numeroExistente);
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha insertado el elemento después de " + numeroExistente);
                     } else {
-                        JOptionPane.showMessageDialog(null, "El número " + numeroExistente + " no se encontró en la lista.");
+                        JOptionPane.showMessageDialog(null,
+                                "El número " + numeroExistente + " no se encontró en la lista.");
                     }
                     lsl.mostrarLista();
                     break;
@@ -45,13 +48,13 @@ public class ListaMenu {
                 case 6:
                     lsl.mostrarLista();
                     break;
-                 case 7:
+                case 7:
                     List<Integer> elementosRepetidos = lsl.encontrarElementosRepetidos();
                     System.out.print("ListaElementosRepetidos: " + elementosRepetidos);
                     break;
                 case 8:
                     List<Integer> listaInversa = lsl.obtenerListaInversa();
-                   JOptionPane.showMessageDialog(null, "Lista inversa: " + listaInversa);
+                    JOptionPane.showMessageDialog(null, "Lista inversa: " + listaInversa);
                     break;
                 case 9:
                     break;

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+
 public class Lista {
     protected Nodo inicio, fin;
 
@@ -30,7 +31,7 @@ public class Lista {
             fin = nuevoNodo;
         }
     }
-    
+
     public List<Integer> obtenerListaInversa() {
         List<Integer> listaInversa = new ArrayList<>();
         Nodo actual = inicio;
@@ -43,8 +44,6 @@ public class Lista {
         return listaInversa;
     }
 
-
-
     public List<Integer> encontrarElementosRepetidos() {
         List<Integer> elementosRepetidos = new ArrayList<>();
         List<Integer> elementosVistos = new ArrayList<>();
@@ -53,8 +52,9 @@ public class Lista {
 
         while (actual != null) {
             int dato = actual.dato;
-            
-            // Si ya hemos visto este elemento, y aún no lo hemos agregado a la lista de repetidos, agrégalo.
+
+            // Si ya hemos visto este elemento, y aún no lo hemos agregado a la lista de
+            // repetidos, agrégalo.
             if (elementosVistos.contains(dato) && !elementosRepetidos.contains(dato)) {
                 elementosRepetidos.add(dato);
             }
