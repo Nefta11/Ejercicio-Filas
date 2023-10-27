@@ -30,6 +30,20 @@ public class Lista {
             fin = nuevoNodo;
         }
     }
+    
+    public List<Integer> obtenerListaInversa() {
+        List<Integer> listaInversa = new ArrayList<>();
+        Nodo actual = inicio;
+
+        while (actual != null) {
+            listaInversa.add(0, actual.dato); // Agregar al principio de la lista
+            actual = actual.siguiente;
+        }
+
+        return listaInversa;
+    }
+
+
 
     public List<Integer> encontrarElementosRepetidos() {
         List<Integer> elementosRepetidos = new ArrayList<>();

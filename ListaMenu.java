@@ -50,6 +50,10 @@ public class ListaMenu {
                     JOptionPane.showMessageDialog(null, "Elementos repetidos: " + elementosRepetidos);
                     break;
                 case 8:
+                    List<Integer> listaInversa = lsl.obtenerListaInversa();
+                    System.out.println("Lista inversa: " + listaInversa);
+                    break;
+                case 9:
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opción Incorrecta");
