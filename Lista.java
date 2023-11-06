@@ -17,6 +17,7 @@ public class Lista {
         }
     }
 
+    
     public boolean vacia() {
         return inicio == null;
     }
